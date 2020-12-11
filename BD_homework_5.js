@@ -1,5 +1,8 @@
 FIO = 'Сотников Иван Дмитриевич'
 
+// загрузка данных в бд
+// /usr/bin/mongoimport --host $APP_MONGO_HOST --port $APP_MONGO_PORT --db movie --collection tags --file /usr/share/data_store/raw_data/tags.json
+
 count = db.tags.find().count()
 
 print('tags count: ', count);
