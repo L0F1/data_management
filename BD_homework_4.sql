@@ -1,8 +1,8 @@
 -- Создание таблицы
-CREATE TABLE movie.content_genres {
+CREATE TABLE movie.content_genres (
     movieid bigint,
     genre varchar(255)
-}
+)
 
 -- Копирование данных в таблицу из csv файла
 psql --host $APP_POSTGRES_HOST -U postgres -c "\\copy movie.content_genres FROM '/usr/share/data_store/raw_data/genres.csv' DELIMITER ',' CSV HEADER"
