@@ -1,3 +1,5 @@
+SELECT 'ФИО: Сотников Иван Дмитриевич';
+
 -- Создание таблицы
 CREATE TABLE movie.content_genres (
     movieid bigint,
