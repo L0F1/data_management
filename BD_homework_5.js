@@ -16,7 +16,7 @@ print('Adventure tags count: ', count);
 printjson(
         db.tags.aggregate([
                 {$group: {
-                                "_id":"$tag_name",
+                                "genre":"$tag_name",
                                 "count": {$sum: 1}
                            }
                 },
@@ -28,15 +28,15 @@ printjson(
 /* output:
 [
 	{
-		"_id" : "Thriller",
+		"genre" : "Thriller",
 		"count" : 7624
 	},
 	{
-		"_id" : "Comedy",
+		"genre" : "Comedy",
 		"count" : 13182
 	},
 	{
-		"_id" : "Drama",
+		"genre" : "Drama",
 		"count" : 20265
 	}
 ]
