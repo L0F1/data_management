@@ -100,6 +100,7 @@ CREATE TABLE movie.content_genres (
     genre varchar(255))
 </pre>
 Копирование данных в таблицу из csv файла
+
 psql --host $APP_POSTGRES_HOST -U postgres -c "\\copy movie.content_genres FROM '/usr/share/data_store/raw_data/genres.csv' DELIMITER ',' CSV HEADER"
 
 Запрос 3
@@ -122,4 +123,5 @@ ON r.movieid = g.movieid
 ORDER BY avg_rating DESC;
 </pre>
 Загрузка данных из таблицы в csv файл
+
 psql --host $APP_POSTGRES_HOST -U postgres -c "\\copy movie.top_rated_tag TO '/usr/share/data_store/raw_data/top_rated_tag.csv' DELIMITER E'\t' CSV HEADER"
