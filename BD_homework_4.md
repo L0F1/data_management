@@ -90,21 +90,23 @@ FROM top_rated ...;
 
 Путь до файла с выгрузкой должен начинаться `/usr/share/data_store/raw_data/` - таким образом данные сохраняться в файловую систему вашей ОС, а не докера.
 # Работа
-<pre>
+```sql
 SELECT 'ФИО: Сотников Иван Дмитриевич';
-</pre>
+```
 Создание таблицы
-<pre>
+```sql
 CREATE TABLE movie.content_genres (
     movieid bigint,
     genre varchar(255))
-</pre>
+```
 Копирование данных в таблицу из csv файла
 
+```shell script
 psql --host $APP_POSTGRES_HOST -U postgres -c "\\copy movie.content_genres FROM '/usr/share/data_store/raw_data/genres.csv' DELIMITER ',' CSV HEADER"
+```
 
 Запрос 3
-<pre>
+```sql
 WITH top_rated AS 
     (SELECT movieid, avg(rating) AS avg_rating
     FROM movie.ratings
@@ -121,7 +123,9 @@ LEFT JOIN
 FROM movie.content_genres) AS g
 ON r.movieid = g.movieid
 ORDER BY avg_rating DESC;
-</pre>
+```
 Загрузка данных из таблицы в csv файл
 
+```shell script
 psql --host $APP_POSTGRES_HOST -U postgres -c "\\copy movie.top_rated_tag TO '/usr/share/data_store/raw_data/top_rated_tag.csv' DELIMITER E'\t' CSV HEADER"
+```
