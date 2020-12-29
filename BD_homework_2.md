@@ -9,7 +9,7 @@
 | 10 | 5 | 3.0 | 898785647 |
 | 1999 | 14 | 4.0 | 8987866556 |
 
-Таблица movie.links
+Таблица `movie.links`
 
 | movieId | imdbIdId | timdbId |
 | --- | --- | --- |
