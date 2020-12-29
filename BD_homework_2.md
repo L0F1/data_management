@@ -69,4 +69,4 @@ GROUP BY userid
 HAVING COUNT(rating) > 10) X;
 </pre>
 ## Результат работы запросов
-![](https://github.com/sotcode/data_management/raw/master/BD_homework_2_Screen_1.jpg)
+![](https://github.com/sotcode/data_management/blob/main/BD_homework_2_Screen_1.jpg)
