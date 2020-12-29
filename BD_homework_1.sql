@@ -1,3 +1,4 @@
+<pre>
 SELECT 'ФИО: Сотников Иван Дмитриевич';
 
 CREATE SCHEMA IF NOT EXISTS P2C;
@@ -37,3 +38,4 @@ INSERT INTO P2C.persons2content VALUES (1, 2, 'producer');
 INSERT INTO P2C.persons2content VALUES (2, 3, 'producer');
 INSERT INTO P2C.persons2content VALUES (3, 4, 'producer');
 INSERT INTO P2C.persons2content VALUES (4, 5, 'producer');
+</pre>
